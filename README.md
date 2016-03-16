@@ -2,6 +2,8 @@
 
 The following is a quick and dirty way to get my Scansnap S1300 working on [Ubuntu][u], [Xubuntu][x], or [Elementary OS][e]. (This could possibly work on other Debian based linux too.)
 
+# Installation on Debian
+
 1. Download firmware:
 
         git clone https://github.com/ckunte/scansnap-firmware.git
@@ -19,3 +21,34 @@ The following is a quick and dirty way to get my Scansnap S1300 working on [Ubun
 [x]: http://xubuntu.org/
 [e]: http://elementary.io/ "elementary OS"
 [ss]: https://launchpad.net/simple-scan "Simple Scanning Utility."
+
+# Installation on Arch Linux
+
+1. Prepare System
+
+```
+sudo su
+#install needed software
+pacman -S sane
+#optional
+#pacman -S xsane
+#pacman -S simple-scan
+
+#add usb device to know sane configuration
+echo “usb 0x04c5 0x1155” >> /etc/sane.d/fujitsu.conf
+exit
+```
+
+2. Download firmware
+
+```
+sudo su
+cd /usr/share/sane/epjitsu/
+wget https://github.com/ckunte/scansnap-firmware/raw/master/1300i_0D12.nal
+exit
+```
+
+3. Use it
+
+Try [Simple Scan][ss], and the scanner should work.
+Read '/etc/sane.d/epjitsu.conf', if needed.
