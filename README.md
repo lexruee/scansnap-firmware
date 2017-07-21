@@ -1,8 +1,8 @@
-# Scansnap firmware
+# Getting Scansnap S1300 to work in Linux
 
 The following is a quick and dirty way to get my Scansnap S1300 working on [Ubuntu][u], [Xubuntu][x], or [Elementary OS][e]. (This could possibly work on other Debian based linux too.)
 
-# Installation on Debian
+## Installation on Debian
 
 1. Download firmware:
 
@@ -17,7 +17,7 @@ The following is a quick and dirty way to get my Scansnap S1300 working on [Ubun
         
 3. Logout, and then re-login. Try [Simple Scan][ss], and the scanner should work.
 
-# Installation on [Arch Linux][al]
+## Installation on [Arch Linux][al]
 
 1. Prepare System
 
