@@ -1,23 +1,23 @@
-# Scansnap firmware
+# Getting Scansnap S1300 to work in Linux
 
 The following is a quick and dirty way to get my Scansnap S1300 working on [Ubuntu][u], [Xubuntu][x], or [Elementary OS][e]. (This could possibly work on other Debian based linux too.)
 
-# Installation on Debian
+## Installation on Debian
 
 1. Download firmware:
 
-        git clone https://github.com/ckunte/scansnap-firmware.git
+        git clone https://github.com/ckunte/sfware.git
 
 2. Run the following commands in a Terminal
 
         sudo mkdir -p /usr/share/sane/epjitsu
-        sudo cp ~/Downloads/scansnap-firmware/* /usr/share/sane/epjitsu/.
+        sudo cp ~/Downloads/sfware/* /usr/share/sane/epjitsu/.
         sudo cpan upgrade sane
         sudo apt-get install libsane-dev
         
 3. Logout, and then re-login. Try [Simple Scan][ss], and the scanner should work.
 
-# Installation on [Arch Linux][al]
+## Installation on [Arch Linux][al]
 
 1. Prepare System
 
@@ -36,7 +36,7 @@ The following is a quick and dirty way to get my Scansnap S1300 working on [Ubun
 
         sudo su
         cd /usr/share/sane/epjitsu/
-        wget https://github.com/ckunte/scansnap-firmware/raw/master/1300i_0D12.nal
+        wget https://github.com/ckunte/sfware/raw/master/1300i_0D12.nal
         exit
 
 3. Use it: Try [Simple Scan][ss], and the scanner should work. Read `/etc/sane.d/epjitsu.conf`, if needed.
